@@ -359,24 +359,76 @@
     filter: brightness(0.7) saturate(0.8);
   }
 
-  .work-item:hover video {
-    transform: scale(1.04);
-    filter: brightness(0.9) saturate(1);
+  .work-thumb {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thumb-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .thumb-bg-1 { background: linear-gradient(135deg, #1c1612 0%, #3a2e1a 50%, #1a1208 100%); }
+  .thumb-bg-2 { background: linear-gradient(135deg, #101820 0%, #1e2e3a 50%, #0a1018 100%); }
+  .thumb-bg-3 { background: linear-gradient(135deg, #181612 0%, #2e281a 50%, #100e08 100%); }
+  .thumb-bg-4 { background: linear-gradient(135deg, #0f0a1e 0%, #1e1430 50%, #120820 100%); }
+
+  .thumb-label {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .thumb-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: rgba(201,169,110,0.4);
+  }
+
+  .thumb-icon {
+    width: 72px;
+    height: 72px;
+    border: 2px solid #c9a96e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #c9a96e;
+    background: rgba(201,169,110,0.08);
+    transition: background 0.3s, transform 0.3s;
+    line-height: 72px;
+    text-align: center;
+  }
+
+  .work-item:hover .thumb-icon {
+    background: rgba(201,169,110,0.2);
+    transform: scale(1.1);
+  }
+
+  .thumb-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(201,169,110,0.6);
   }
 
   .work-overlay {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(8,8,8,0.9) 0%, transparent 50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, transparent 100%);
     padding: 28px;
-    opacity: 0;
-    transition: opacity 0.4s;
+    opacity: 1;
   }
-
-  .work-item:hover .work-overlay { opacity: 1; }
 
   .work-title {
     font-family: 'Bebas Neue', sans-serif;
@@ -808,14 +860,15 @@
   <div class="work-grid">
     <!-- Video 1 -->
     <a class="work-item fade-in-up" href="https://drive.google.com/file/d/1lWBRBPDOYnGzdME5cG3nnHirzsz17spc/view" target="_blank">
-      <div class="work-thumb" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2520 100%); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#c9a96e" stroke-width="1"/><polygon points="10,8 17,12 10,16" fill="#c9a96e"/></svg>
+      <div class="work-thumb">
+        <div class="thumb-bg thumb-bg-1"></div>
+        <div class="thumb-label">
+          <span class="thumb-num">01</span>
+          <span class="thumb-icon">▶</span>
+          <span class="thumb-tag">Social Content</span>
+        </div>
       </div>
-      <div class="work-number">01</div>
-      <div class="play-btn" style="transform:translate(-50%,-50%) scale(1);">
-        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-      </div>
-      <div class="work-overlay" style="opacity:1;">
+      <div class="work-overlay">
         <div class="work-title">Short Form Edit</div>
         <div class="work-meta">Social Content · Jungle Creations</div>
       </div>
@@ -823,14 +876,15 @@
 
     <!-- Video 2 -->
     <a class="work-item fade-in-up" href="https://drive.google.com/file/d/1wrKOjXFHLPDXMWACmyjaf8WNHw8m4f3e/view" target="_blank">
-      <div class="work-thumb" style="background: linear-gradient(135deg, #1a1a1a 0%, #20252a 100%); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#c9a96e" stroke-width="1"/><polygon points="10,8 17,12 10,16" fill="#c9a96e"/></svg>
+      <div class="work-thumb">
+        <div class="thumb-bg thumb-bg-2"></div>
+        <div class="thumb-label">
+          <span class="thumb-num">02</span>
+          <span class="thumb-icon">▶</span>
+          <span class="thumb-tag">Platform Content</span>
+        </div>
       </div>
-      <div class="work-number">02</div>
-      <div class="play-btn" style="transform:translate(-50%,-50%) scale(1);">
-        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-      </div>
-      <div class="work-overlay" style="opacity:1;">
+      <div class="work-overlay">
         <div class="work-title">Dynamic Cut</div>
         <div class="work-meta">Platform Content · Metdaan</div>
       </div>
@@ -838,14 +892,15 @@
 
     <!-- Video 3 -->
     <a class="work-item fade-in-up" href="https://drive.google.com/file/d/1ZsCRLLHVXl5mV83V9TFJUfEAGdp2vbL8/view" target="_blank">
-      <div class="work-thumb" style="background: linear-gradient(135deg, #1a1a1a 0%, #25201a 100%); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#c9a96e" stroke-width="1"/><polygon points="10,8 17,12 10,16" fill="#c9a96e"/></svg>
+      <div class="work-thumb">
+        <div class="thumb-bg thumb-bg-3"></div>
+        <div class="thumb-label">
+          <span class="thumb-num">03</span>
+          <span class="thumb-icon">▶</span>
+          <span class="thumb-tag">TikTok / YouTube</span>
+        </div>
       </div>
-      <div class="work-number">03</div>
-      <div class="play-btn" style="transform:translate(-50%,-50%) scale(1);">
-        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-      </div>
-      <div class="work-overlay" style="opacity:1;">
+      <div class="work-overlay">
         <div class="work-title">Viral Content</div>
         <div class="work-meta">Multi-Platform · TikTok / YouTube</div>
       </div>
@@ -853,15 +908,16 @@
 
     <!-- Video 4 — AI Prompt Video -->
     <a class="work-item ai-video fade-in-up" href="https://drive.google.com/file/d/1qFRBamm8WXh4fHlzqWbbrrj5c5dtnWpk/view" target="_blank">
-      <div class="work-thumb" style="background: linear-gradient(135deg, #1a1a2a 0%, #2a1a2a 100%); width:100%; height:100%; display:flex; align-items:center; justify-content:center; gap: 16px;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#8b5cf6" stroke-width="1"/><polygon points="10,8 17,12 10,16" fill="#8b5cf6"/></svg>
+      <div class="work-thumb">
+        <div class="thumb-bg thumb-bg-4"></div>
+        <div class="thumb-label">
+          <span class="thumb-num">04</span>
+          <span class="thumb-icon" style="color:#8b5cf6">▶</span>
+          <span class="thumb-tag">AI Generated</span>
+        </div>
       </div>
-      <div class="work-number">04</div>
       <div class="ai-badge">AI Generated</div>
-      <div class="play-btn" style="transform:translate(-50%,-50%) scale(1); border-color: #8b5cf6;">
-        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="#8b5cf6"/></svg>
-      </div>
-      <div class="work-overlay" style="opacity:1;">
+      <div class="work-overlay">
         <div class="work-title">AI Prompt Video</div>
         <div class="work-meta">AI Content Generation · Metdaan</div>
       </div>
