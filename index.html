@@ -17,11 +17,11 @@
     --mid: #6b6560;
     --red: #e05c3a;
   }
-
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--black);
     color: var(--white);
@@ -30,7 +30,7 @@
     overflow-x: hidden;
     cursor: none;
   }
-
+ 
   /* Custom cursor */
   .cursor {
     position: fixed;
@@ -54,7 +54,7 @@
     transition: transform 0.15s ease, width 0.4s, height 0.4s;
   }
   body:hover .cursor { opacity: 1; }
-
+ 
   /* Nav */
   nav {
     position: fixed;
@@ -66,7 +66,7 @@
     padding: 28px 60px;
     background: linear-gradient(to bottom, rgba(8,8,8,0.95) 0%, transparent 100%);
   }
-
+ 
   .nav-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 22px;
@@ -74,7 +74,7 @@
     color: var(--white);
     text-decoration: none;
   }
-
+ 
   .nav-links {
     display: flex;
     gap: 40px;
@@ -90,7 +90,7 @@
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--accent); }
-
+ 
   /* Hero */
   .hero {
     min-height: 100vh;
@@ -101,7 +101,7 @@
     position: relative;
     overflow: hidden;
   }
-
+ 
   .hero::before {
     content: '';
     position: absolute;
@@ -110,7 +110,7 @@
     background: radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
-
+ 
   .hero-bg-text {
     position: absolute;
     bottom: -60px; left: -20px;
@@ -122,12 +122,12 @@
     user-select: none;
     white-space: nowrap;
   }
-
+ 
   .hero-content {
     z-index: 2;
     animation: fadeUp 1s ease both;
   }
-
+ 
   .hero-tag {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -145,7 +145,7 @@
     width: 30px; height: 1px;
     background: var(--accent);
   }
-
+ 
   .hero-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(64px, 8vw, 120px);
@@ -159,7 +159,7 @@
     color: var(--accent);
     font-size: 0.65em;
   }
-
+ 
   .hero-bio {
     font-size: 16px;
     line-height: 1.8;
@@ -167,14 +167,14 @@
     max-width: 440px;
     margin-bottom: 48px;
   }
-
+ 
   .hero-cta {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     align-items: center;
   }
-
+ 
   .btn-primary {
     display: inline-block;
     padding: 14px 36px;
@@ -191,7 +191,7 @@
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(201,169,110,0.3);
   }
-
+ 
   .btn-ghost {
     display: inline-block;
     padding: 13px 36px;
@@ -205,7 +205,7 @@
     transition: border-color 0.3s, color 0.3s;
   }
   .btn-ghost:hover { border-color: var(--white); color: var(--white); }
-
+ 
   .hero-stats {
     z-index: 2;
     display: flex;
@@ -214,7 +214,7 @@
     align-items: flex-end;
     animation: fadeUp 1s 0.2s ease both;
   }
-
+ 
   .stat-item {
     text-align: right;
   }
@@ -239,7 +239,7 @@
     color: var(--mid);
     margin-top: 4px;
   }
-
+ 
   .scroll-hint {
     position: absolute;
     bottom: 40px;
@@ -265,12 +265,12 @@
     background: linear-gradient(to bottom, var(--dim), transparent);
     animation: scrollLine 2s 1s infinite;
   }
-
+ 
   /* Section base */
   section {
     padding: 120px 60px;
   }
-
+ 
   .section-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -288,7 +288,7 @@
     width: 24px; height: 1px;
     background: var(--accent);
   }
-
+ 
   .section-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(42px, 5vw, 72px);
@@ -297,20 +297,20 @@
     margin-bottom: 60px;
     color: var(--white);
   }
-
+ 
   /* Work / Portfolio */
   #work {
     background: var(--black);
     border-top: 1px solid var(--dim);
   }
-
+ 
   .work-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 4px;
   }
-
+ 
   .work-item {
     position: relative;
     aspect-ratio: 9/16;
@@ -321,17 +321,17 @@
     text-decoration: none;
     display: block;
   }
-
+ 
   .work-item:first-child {
     grid-row: span 2;
     aspect-ratio: auto;
   }
-
+ 
   .work-item.ai-video {
     grid-column: span 2;
     aspect-ratio: 16/9;
   }
-
+ 
   .ai-badge {
     position: absolute;
     top: 20px; left: 20px;
@@ -345,11 +345,11 @@
     color: #fff;
     z-index: 2;
   }
-
+ 
   .work-item.ai-video video {
     object-position: center;
   }
-
+ 
   .work-item video {
     width: 100%;
     height: 100%;
@@ -358,7 +358,7 @@
     transition: transform 0.6s ease, filter 0.6s ease;
     filter: brightness(0.7) saturate(0.8);
   }
-
+ 
   .work-thumb {
     position: absolute;
     inset: 0;
@@ -366,7 +366,7 @@
     align-items: center;
     justify-content: center;
   }
-
+ 
   .thumb-bg {
     position: absolute;
     inset: 0;
@@ -375,7 +375,7 @@
   .thumb-bg-2 { background: linear-gradient(135deg, #101820 0%, #1e2e3a 50%, #0a1018 100%); }
   .thumb-bg-3 { background: linear-gradient(135deg, #181612 0%, #2e281a 50%, #100e08 100%); }
   .thumb-bg-4 { background: linear-gradient(135deg, #0f0a1e 0%, #1e1430 50%, #120820 100%); }
-
+ 
   .thumb-label {
     position: relative;
     z-index: 1;
@@ -385,14 +385,14 @@
     gap: 14px;
     text-align: center;
   }
-
+ 
   .thumb-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 13px;
     letter-spacing: 4px;
     color: rgba(201,169,110,0.4);
   }
-
+ 
   .thumb-icon {
     width: 72px;
     height: 72px;
@@ -408,12 +408,12 @@
     line-height: 72px;
     text-align: center;
   }
-
+ 
   .work-item:hover .thumb-icon {
     background: rgba(201,169,110,0.2);
     transform: scale(1.1);
   }
-
+ 
   .thumb-tag {
     font-family: 'DM Mono', monospace;
     font-size: 9px;
@@ -421,7 +421,7 @@
     text-transform: uppercase;
     color: rgba(201,169,110,0.6);
   }
-
+ 
   .work-overlay {
     position: absolute;
     bottom: 0; left: 0; right: 0;
@@ -429,7 +429,7 @@
     padding: 28px;
     opacity: 1;
   }
-
+ 
   .work-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 22px;
@@ -437,7 +437,7 @@
     color: var(--white);
     margin-bottom: 6px;
   }
-
+ 
   .work-meta {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -445,7 +445,7 @@
     color: var(--accent);
     text-transform: uppercase;
   }
-
+ 
   .work-number {
     position: absolute;
     top: 20px; right: 24px;
@@ -454,7 +454,7 @@
     color: rgba(255,255,255,0.06);
     line-height: 1;
   }
-
+ 
   .play-btn {
     position: absolute;
     top: 50%; left: 50%;
@@ -472,19 +472,19 @@
     transform: translate(-50%, -50%) scale(1);
   }
   .play-btn svg { width: 18px; fill: var(--accent); margin-left: 3px; }
-
+ 
   /* Experience */
   #experience {
     background: #0c0c0c;
     border-top: 1px solid var(--dim);
   }
-
+ 
   .exp-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2px;
   }
-
+ 
   .exp-card {
     background: #111;
     padding: 48px;
@@ -493,7 +493,7 @@
     transition: background 0.3s;
   }
   .exp-card:hover { background: #161616; }
-
+ 
   .exp-card::before {
     content: '';
     position: absolute;
@@ -503,7 +503,7 @@
     transition: height 0.4s ease;
   }
   .exp-card:hover::before { height: 100%; }
-
+ 
   .exp-period {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -512,7 +512,7 @@
     color: var(--mid);
     margin-bottom: 18px;
   }
-
+ 
   .exp-company {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 32px;
@@ -521,14 +521,14 @@
     margin-bottom: 6px;
     line-height: 1;
   }
-
+ 
   .exp-role {
     font-size: 15px;
     font-weight: 400;
     color: var(--white);
     margin-bottom: 28px;
   }
-
+ 
   .exp-tasks {
     list-style: none;
     display: flex;
@@ -548,7 +548,7 @@
     left: 0;
     color: var(--accent);
   }
-
+ 
   .exp-badge {
     position: absolute;
     top: 48px; right: 48px;
@@ -560,32 +560,32 @@
     background: var(--accent);
     padding: 4px 10px;
   }
-
+ 
   /* Skills */
   #skills {
     background: var(--black);
     border-top: 1px solid var(--dim);
   }
-
+ 
   .skills-layout {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 80px;
     align-items: start;
   }
-
+ 
   .skills-intro {
     font-size: 15px;
     line-height: 1.9;
     color: var(--mid);
   }
-
+ 
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3px;
   }
-
+ 
   .skill-chip {
     background: #111;
     padding: 20px 28px;
@@ -609,20 +609,20 @@
   .skill-chip:hover::after { transform: translateX(0); }
   .skill-chip:hover { color: var(--black); }
   .skill-chip span { position: relative; z-index: 1; }
-
+ 
   /* About / Education */
   #about {
     background: #0c0c0c;
     border-top: 1px solid var(--dim);
   }
-
+ 
   .about-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
   }
-
+ 
   .about-text p {
     font-size: 16px;
     line-height: 1.9;
@@ -630,9 +630,9 @@
     margin-bottom: 20px;
   }
   .about-text strong { color: var(--white); font-weight: 400; }
-
+ 
   .edu-list { display: flex; flex-direction: column; gap: 3px; }
-
+ 
   .edu-item {
     background: #111;
     padding: 28px 32px;
@@ -643,7 +643,7 @@
     transition: background 0.3s;
   }
   .edu-item:hover { background: #161616; }
-
+ 
   .edu-year {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 36px;
@@ -651,7 +651,7 @@
     line-height: 1;
     letter-spacing: 2px;
   }
-
+ 
   .edu-details {}
   .edu-degree {
     font-size: 14px;
@@ -666,7 +666,7 @@
     text-transform: uppercase;
     color: var(--accent);
   }
-
+ 
   /* Contact */
   #contact {
     background: var(--black);
@@ -676,7 +676,7 @@
     position: relative;
     overflow: hidden;
   }
-
+ 
   #contact::before {
     content: 'CONNECT';
     position: absolute;
@@ -689,7 +689,7 @@
     pointer-events: none;
     user-select: none;
   }
-
+ 
   .contact-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(48px, 7vw, 100px);
@@ -700,7 +700,7 @@
     position: relative;
     z-index: 1;
   }
-
+ 
   .contact-subtitle {
     font-size: 16px;
     color: var(--mid);
@@ -708,7 +708,7 @@
     position: relative;
     z-index: 1;
   }
-
+ 
   .contact-links {
     display: flex;
     gap: 16px;
@@ -717,7 +717,7 @@
     position: relative;
     z-index: 1;
   }
-
+ 
   .contact-link {
     display: inline-flex;
     align-items: center;
@@ -737,7 +737,7 @@
     color: var(--accent);
     background: rgba(201,169,110,0.04);
   }
-
+ 
   /* Footer */
   footer {
     padding: 32px 60px;
@@ -754,7 +754,7 @@
     color: var(--dim);
     text-transform: uppercase;
   }
-
+ 
   /* Animations */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -768,13 +768,13 @@
     0%, 100% { opacity: 0; transform: scaleY(0); transform-origin: top; }
     50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
   }
-
+ 
   .fade-in-up {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
-
+ 
   /* Responsive */
   @media (max-width: 900px) {
     nav { padding: 24px 30px; }
@@ -794,10 +794,10 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
+ 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">AV</a>
@@ -809,11 +809,11 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg-text">VOKRRI</div>
-
+ 
   <div class="hero-content">
     <div class="hero-tag">Video Editor & Team Leader</div>
     <h1 class="hero-name">
@@ -830,7 +830,7 @@
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
   </div>
-
+ 
   <div class="hero-stats">
     <div class="stat-item">
       <div class="stat-number">4<sup>+</sup></div>
@@ -845,18 +845,18 @@
       <div class="stat-label">Platforms Mastered</div>
     </div>
   </div>
-
+ 
   <div class="scroll-hint">
     <span>Scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
-
+ 
 <!-- WORK -->
 <section id="work">
   <div class="section-label">Selected Work</div>
   <h2 class="section-title">PORTFOLIO</h2>
-
+ 
   <div class="work-grid">
     <!-- Video 1 -->
     <a class="work-item fade-in-up" href="https://drive.google.com/file/d/1lWBRBPDOYnGzdME5cG3nnHirzsz17spc/view" target="_blank">
@@ -873,7 +873,7 @@
         <div class="work-meta">Social Content · Jungle Creations</div>
       </div>
     </a>
-
+ 
     <!-- Video 2 -->
     <a class="work-item fade-in-up" href="https://drive.google.com/file/d/1wrKOjXFHLPDXMWACmyjaf8WNHw8m4f3e/view" target="_blank">
       <div class="work-thumb">
@@ -889,7 +889,7 @@
         <div class="work-meta">Platform Content · Metdaan</div>
       </div>
     </a>
-
+ 
     <!-- Video 3 -->
     <a class="work-item fade-in-up" href="https://drive.google.com/file/d/1ZsCRLLHVXl5mV83V9TFJUfEAGdp2vbL8/view" target="_blank">
       <div class="work-thumb">
@@ -905,7 +905,7 @@
         <div class="work-meta">Multi-Platform · TikTok / YouTube</div>
       </div>
     </a>
-
+ 
     <!-- Video 4 — AI Prompt Video -->
     <a class="work-item ai-video fade-in-up" href="https://drive.google.com/file/d/1qFRBamm8WXh4fHlzqWbbrrj5c5dtnWpk/view" target="_blank">
       <div class="work-thumb">
@@ -924,12 +924,12 @@
     </a>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">Career</div>
   <h2 class="section-title">EXPERIENCE</h2>
-
+ 
   <div class="exp-grid">
     <div class="exp-card fade-in-up">
       <div class="exp-badge">Current</div>
@@ -943,7 +943,7 @@
         <li>Driving innovative engagement strategies for maximum content performance</li>
       </ul>
     </div>
-
+ 
     <div class="exp-card fade-in-up">
       <div class="exp-badge">Current</div>
       <div class="exp-period">Jan 2022 – Present</div>
@@ -958,18 +958,18 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Expertise</div>
   <h2 class="section-title">SKILLS</h2>
-
+ 
   <div class="skills-layout">
     <div class="skills-intro fade-in-up">
       <p>A toolkit built for speed, precision, and visual impact — spanning the full spectrum from raw footage to final delivery across every major platform.</p>
       <p style="margin-top: 20px;">Both the technical craft and the human side of creative work: leading, mentoring, and problem-solving under pressure.</p>
     </div>
-
+ 
     <div class="skills-grid fade-in-up">
       <div class="skill-chip"><span>Adobe Premiere Pro</span></div>
       <div class="skill-chip"><span>Final Cut Pro</span></div>
@@ -986,12 +986,12 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ABOUT / EDUCATION -->
 <section id="about">
   <div class="section-label">Background</div>
   <h2 class="section-title">ABOUT</h2>
-
+ 
   <div class="about-layout">
     <div class="about-text fade-in-up">
       <p>
@@ -1008,7 +1008,7 @@
         curiosity, and a results-oriented mindset.
       </p>
     </div>
-
+ 
     <div class="edu-list fade-in-up">
       <div class="edu-item">
         <div class="edu-year">2024</div>
@@ -1034,7 +1034,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-label" style="justify-content: center;">Let's Work</div>
@@ -1063,26 +1063,26 @@
     </a>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <span>© 2025 Andi Vokrri</span>
   <span>Video Editor & Team Leader</span>
   <span>Kosovo · London</span>
 </footer>
-
+ 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let rx = 0, ry = 0, cx = 0, cy = 0;
-
+ 
   document.addEventListener('mousemove', e => {
     cx = e.clientX; cy = e.clientY;
     cursor.style.left = cx + 'px';
     cursor.style.top = cy + 'px';
   });
-
+ 
   function animateRing() {
     rx += (cx - rx) * 0.12;
     ry += (cy - ry) * 0.12;
@@ -1091,7 +1091,7 @@
     requestAnimationFrame(animateRing);
   }
   animateRing();
-
+ 
   document.querySelectorAll('a, button, .work-item, .skill-chip').forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.style.width = '20px';
@@ -1106,7 +1106,7 @@
       ring.style.height = '40px';
     });
   });
-
+ 
   // Scroll animations
   const observer = new IntersectionObserver(entries => {
     entries.forEach((entry, i) => {
